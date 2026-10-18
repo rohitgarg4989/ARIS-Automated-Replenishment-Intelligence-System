@@ -1,0 +1,41 @@
+
+INVENTORY MANAGEMENT POLICY — WH-01
+=====================================
+
+1. REORDER POINT (ROP)
+   ROP = (Average Daily Usage × Lead Time Days) + Safety Stock
+   All purchase orders MUST be raised when stock hits or drops below ROP.
+
+2. SAFETY STOCK
+   Safety Stock = Z × σ_d × √L
+   Where:
+     Z    = Service-level z-score  (95% SL → Z = 1.65)
+     σ_d  = Standard deviation of daily demand
+     L    = Supplier lead time in days
+   Default service level: 95%
+
+3. ECONOMIC ORDER QUANTITY (EOQ)
+   EOQ = √(2 × D × S / H)
+   Where:
+     D = Annual demand (units)
+     S = Ordering cost per order ($50 default)
+     H = Annual holding cost per unit (unit_cost × 0.20)
+   EOQ is the recommended order quantity unless MOQ is higher.
+
+4. MAXIMUM STOCK LEVEL
+   Max Stock = ROP + EOQ × 1.5
+   Stock must not exceed Max Stock to prevent over-capitalisation.
+
+5. STOCKOUT PROTOCOL
+   If current_stock < safety_stock, escalate immediately to Inventory Manager.
+   Do NOT wait for the next review cycle.
+
+6. ORDER APPROVAL LIMITS
+   - Orders < $5,000  : Auto-approved by system
+   - Orders $5,000–$50,000 : Requires Inventory Manager approval
+   - Orders > $50,000 : Requires CFO sign-off
+
+7. DATA RETENTION
+   Sales data retained: 24 months
+   Supplier feedback retained: 36 months
+   PII fields (emails, names) must NOT appear in system logs.

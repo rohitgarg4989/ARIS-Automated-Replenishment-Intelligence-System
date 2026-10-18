@@ -1,0 +1,57 @@
+feedback_id,supplier_id,sku_id,order_date,expected_delivery,actual_delivery,delay_days,delay_reason,status,recorded_by
+FB-0025,SUP-B,SKU-008,2024-01-01,2024-01-11,2024-01-10,0,On time,on_time,system
+FB-0040,SUP-A,SKU-002,2024-01-09,2024-01-16,2024-01-16,0,On time,on_time,system
+FB-0013,SUP-B,SKU-004,2024-01-09,2024-01-19,2024-01-18,0,On time,on_time,system
+FB-0031,SUP-B,SKU-004,2024-01-15,2024-01-25,2024-02-04,10,Port congestion causing shipment hold,delayed,system
+FB-0038,SUP-B,SKU-004,2024-01-17,2024-01-27,2024-01-27,0,On time,on_time,system
+FB-0021,SUP-C,SKU-010,2024-01-17,2024-01-22,2024-01-21,0,On time,on_time,system
+FB-0014,SUP-B,SKU-005,2024-01-17,2024-01-27,2024-02-06,10,Customs clearance delay,delayed,system
+FB-0010,SUP-C,SKU-012,2024-01-19,2024-01-24,2024-01-24,0,On time,on_time,system
+FB-0023,SUP-C,SKU-011,2024-01-30,2024-02-04,2024-02-03,0,On time,on_time,system
+FB-0020,SUP-A,SKU-003,2024-02-10,2024-02-17,2024-02-16,0,On time,on_time,system
+FB-0026,SUP-C,SKU-009,2024-02-15,2024-02-20,2024-02-20,0,On time,on_time,system
+FB-0005,SUP-C,SKU-010,2024-02-19,2024-02-24,2024-02-24,0,On time,on_time,system
+FB-0018,SUP-B,SKU-006,2024-02-26,2024-03-07,2024-03-07,0,On time,on_time,system
+FB-0039,SUP-C,SKU-010,2024-02-26,2024-03-02,2024-03-03,1,Supplier production backlog,delayed,system
+FB-0006,SUP-C,SKU-011,2024-02-28,2024-03-04,2024-03-04,0,On time,on_time,system
+FB-0007,SUP-A,SKU-014,2024-02-29,2024-03-07,2024-03-06,0,On time,on_time,system
+FB-0011,SUP-C,SKU-009,2024-03-03,2024-03-08,2024-03-15,7,Customs clearance delay,delayed,system
+FB-0022,SUP-C,SKU-009,2024-03-05,2024-03-10,2024-03-10,0,On time,on_time,system
+FB-0016,SUP-A,SKU-003,2024-03-08,2024-03-15,2024-03-24,9,Raw material shortage at supplier facility,delayed,system
+FB-0027,SUP-A,SKU-014,2024-03-17,2024-03-24,2024-03-24,0,On time,on_time,system
+FB-0036,SUP-C,SKU-012,2024-03-20,2024-03-25,2024-03-24,0,On time,on_time,system
+FB-0029,SUP-C,SKU-010,2024-03-23,2024-03-28,2024-03-28,0,On time,on_time,system
+FB-0001,SUP-C,SKU-013,2024-03-27,2024-04-01,2024-04-08,7,Port congestion causing shipment hold,delayed,system
+FB-0024,SUP-C,SKU-013,2024-03-28,2024-04-02,2024-04-09,7,Supplier production backlog,delayed,system
+FB-0002,SUP-B,SKU-006,2024-03-29,2024-04-08,2024-04-08,0,On time,on_time,system
+FB-0030,SUP-A,SKU-015,2024-04-02,2024-04-09,2024-04-08,0,On time,on_time,system
+FB-0009,SUP-A,SKU-003,2024-04-04,2024-04-11,2024-04-10,0,On time,on_time,system
+FB-0028,SUP-A,SKU-003,2024-04-05,2024-04-12,2024-04-12,0,On time,on_time,system
+FB-0008,SUP-B,SKU-005,2024-04-26,2024-05-06,2024-05-05,0,On time,on_time,system
+FB-0003,SUP-C,SKU-012,2024-04-27,2024-05-02,2024-05-01,0,On time,on_time,system
+FB-0033,SUP-A,SKU-003,2024-05-01,2024-05-08,2024-05-08,0,On time,on_time,system
+FB-0032,SUP-A,SKU-002,2024-05-04,2024-05-11,2024-05-11,0,On time,on_time,system
+FB-0019,SUP-C,SKU-009,2024-05-06,2024-05-11,2024-05-12,1,Port congestion causing shipment hold,delayed,system
+FB-0015,SUP-B,SKU-004,2024-05-07,2024-05-17,2024-05-16,0,On time,on_time,system
+FB-0037,SUP-B,SKU-008,2024-05-12,2024-05-22,2024-05-22,0,On time,on_time,system
+FB-0034,SUP-B,SKU-005,2024-05-15,2024-05-25,2024-05-24,0,On time,on_time,system
+FB-0035,SUP-B,SKU-004,2024-05-18,2024-05-28,2024-05-28,0,On time,on_time,system
+FB-0004,SUP-A,SKU-002,2024-05-21,2024-05-28,2024-06-07,10,Customs clearance delay,delayed,system
+FB-0012,SUP-A,SKU-015,2024-05-22,2024-05-29,2024-06-04,6,Port congestion causing shipment hold,delayed,system
+FB-0017,SUP-B,SKU-005,2024-05-29,2024-06-08,2024-06-07,0,On time,on_time,system
+FB-0041,SUP-B,SKU-004,2024-04-01,2024-04-11,2024-04-16,5,Port congestion causing shipment hold,delayed,agent
+FB-0042,SUP-B,SKU-004,2024-04-01,2024-04-11,2024-04-16,5,Port congestion causing shipment hold,delayed,agent
+FB-0043,SUP-B,SKU-004,2024-04-01,2024-04-11,2024-04-16,5,Port congestion causing shipment hold,delayed,agent
+FB-0044,SUP-B,SKU-004,2024-04-01,2024-04-11,2024-04-16,5,Port congestion causing shipment hold,delayed,agent
+FB-0045,SUP-B,SKU-004,2024-03-15,2024-03-10,2024-03-16,6,Port congestion causing shipment hold,delayed,agent
+FB-0046,SUP-B,SKU-004,2024-03-15,2024-03-10,2024-03-16,6,Port congestion causing shipment hold,delayed,agent
+FB-0047,SUP-B,SKU-004,2024-03-15,2024-03-10,2024-03-16,6,Port congestion causing shipment hold,delayed,agent
+FB-0048,SUP-B,SKU-004,2024-03-15,2024-03-10,2024-03-16,6,Port congestion causing shipment hold,delayed,agent
+FB-0049,SUP-B,SKU-004,2024-04-01,2024-04-11,2024-04-16,5,Port congestion causing shipment hold,delayed,agent
+FB-0050,SUP-B,SKU-004,2024-04-01,2024-04-11,2024-04-16,5,Port congestion causing shipment hold,delayed,agent
+FB-0051,SUP-B,SKU-004,2024-04-01,2024-04-11,2024-04-16,5,Port congestion causing shipment hold,delayed,agent
+FB-0052,SUP-B,SKU-004,2024-04-01,2024-04-11,2024-04-16,5,Port congestion causing shipment hold,delayed,agent
+FB-0053,SUP-B,SKU-004,2024-04-01,2024-04-11,2024-04-16,5,Port congestion causing shipment hold,delayed,agent
+FB-0054,SUP-B,SKU-004,2024-03-15,2024-03-10,2024-03-16,6,Port congestion causing shipment hold,delayed,agent
+FB-0055,SUP-B,SKU-004,2024-04-01,2024-04-11,2024-04-16,5,Port congestion causing shipment hold,delayed,agent
+FB-0056,SUP-B,SKU-004,2024-04-01,2024-04-11,2024-04-16,5,Port congestion causing shipment hold,delayed,agent

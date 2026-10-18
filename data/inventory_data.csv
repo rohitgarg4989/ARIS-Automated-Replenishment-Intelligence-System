@@ -1,0 +1,16 @@
+sku_id,sku_name,category,current_stock,safety_stock,reorder_point,max_stock,unit_cost,ordering_cost,holding_cost_pct,supplier_id,warehouse_id
+SKU-001,Printer Paper A4 (500 sheets),Office Supplies,185,21,196,946,3.5,50.0,0.2,SUP-A,WH-01
+SKU-002,Ball-Point Pens (Box 50),Office Supplies,49,13,97,457,8.0,50.0,0.2,SUP-A,WH-01
+SKU-003,Stapler Heavy Duty,Office Supplies,106,4,32,152,22.0,50.0,0.2,SUP-A,WH-01
+SKU-004,USB-C Cables (Pack 5),Electronics,261,31,211,751,15.0,50.0,0.2,SUP-B,WH-01
+SKU-005,Wireless Mouse,Electronics,122,15,105,375,25.0,50.0,0.2,SUP-B,WH-01
+SKU-006,HDMI Cables 2m,Electronics,204,20,160,580,10.0,50.0,0.2,SUP-B,WH-01
+SKU-007,Laptop Stand Aluminium,Electronics,75,10,70,250,45.0,50.0,0.2,SUP-B,WH-01
+SKU-008,AA Batteries (Pack 20),Electronics,295,41,341,1241,6.0,50.0,0.2,SUP-B,WH-01
+SKU-009,Safety Gloves (Box 100),Industrial,364,18,118,718,9.0,50.0,0.2,SUP-C,WH-01
+SKU-010,Face Masks (Box 50),Industrial,794,36,236,1436,12.0,50.0,0.2,SUP-C,WH-01
+SKU-011,Safety Goggles,Industrial,146,7,47,287,7.5,50.0,0.2,SUP-C,WH-01
+SKU-012,Cable Ties 300mm (Pack 100),Industrial,58,14,89,539,4.0,50.0,0.2,SUP-C,WH-01
+SKU-013,Padlock Heavy Duty,Industrial,82,7,32,182,18.0,50.0,0.2,SUP-C,WH-01
+SKU-014,Whiteboard Markers (Set 12),Office Supplies,141,13,83,383,9.0,50.0,0.2,SUP-A,WH-01
+SKU-015,Sticky Notes 76x76 (12-pack),Office Supplies,102,26,180,840,5.0,50.0,0.2,SUP-A,WH-01

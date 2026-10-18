@@ -1,0 +1,18 @@
+{
+  "max_auto_approve_value": 5000,
+  "max_manager_approve_value": 50000,
+  "min_confidence_threshold": 0.60,
+  "min_reliability_score": 0.75,
+  "max_safety_stock_multiplier": 1.5,
+  "escalation_triggers": [
+    "order_value_exceeds_limit",
+    "low_confidence",
+    "stockout_detected",
+    "high_demand_uncertainty"
+  ],
+  "order_approval_limits": {
+    "auto_approved": {"max_value": 5000},
+    "inventory_manager": {"max_value": 50000},
+    "cfo_sign_off": {"min_value": 50001}
+  }
+}

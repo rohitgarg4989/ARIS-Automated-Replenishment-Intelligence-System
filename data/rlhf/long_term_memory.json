@@ -1,0 +1,77 @@
+{
+  "sku_notes": {},
+  "past_recommendations": [
+    {
+      "sku_id": "SKU-008",
+      "recommended_qty": 760,
+      "confidence": 0.9,
+      "query": "Does SKU-008 (AA Batteries) need reordering? Show me the full analysis.",
+      "logged_at": "2026-06-23T10:29:17.101533"
+    },
+    {
+      "sku_id": "SKU-008",
+      "recommended_qty": 760,
+      "confidence": 0.9,
+      "query": "Does SKU-008 (AA Batteries) need reordering? Show me the full analysis.",
+      "logged_at": "2026-06-23T10:29:35.368947"
+    },
+    {
+      "sku_id": "SKU-008",
+      "recommended_qty": 760,
+      "confidence": 0.9,
+      "query": "Does SKU-008 (AA Batteries) need reordering? Show me the full analysis.",
+      "logged_at": "2026-06-23T10:29:53.461706"
+    },
+    {
+      "sku_id": "SKU-008",
+      "recommended_qty": 760,
+      "confidence": 0.9,
+      "query": "Does SKU-008 (AA Batteries) need reordering? Show me the full analysis.",
+      "logged_at": "2026-06-23T10:31:39.445917"
+    },
+    {
+      "sku_id": "SKU-008",
+      "recommended_qty": 760,
+      "confidence": 0.9,
+      "query": "Does SKU-008 (AA Batteries) need reordering? Show me the full analysis.",
+      "logged_at": "2026-06-23T10:48:21.233790"
+    },
+    {
+      "sku_id": "SKU-008",
+      "recommended_qty": 760,
+      "confidence": 0.9,
+      "query": "Does SKU-008 need reordering?",
+      "logged_at": "2026-06-23T10:53:56.221721"
+    },
+    {
+      "sku_id": "SKU-008",
+      "recommended_qty": 760,
+      "confidence": 0.9,
+      "query": "Does SKU-008 (AA Batteries) need reordering? Show me the full analysis.",
+      "logged_at": "2026-06-25T20:33:55.538157"
+    },
+    {
+      "sku_id": "SKU-001",
+      "recommended_qty": 857,
+      "confidence": 0.75,
+      "query": "Does SKU-001 need reordering?",
+      "logged_at": "2026-06-26T23:55:19.190653"
+    },
+    {
+      "sku_id": "SKU-008",
+      "recommended_qty": 760,
+      "confidence": 0.9,
+      "query": "Does SKU-008 (AA Batteries) need reordering? Show me the full analysis.",
+      "logged_at": "2026-06-27T00:00:22.410143"
+    },
+    {
+      "sku_id": "SKU-001",
+      "recommended_qty": 857,
+      "confidence": 0.75,
+      "query": "What is the stock of SKU-001",
+      "logged_at": "2026-06-27T10:48:36.945855"
+    }
+  ],
+  "user_preferences": {},
+  "created_at": "2026-06-23T10:29:17.051276"
+}

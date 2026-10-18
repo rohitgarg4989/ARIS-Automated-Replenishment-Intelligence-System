@@ -1,0 +1,41 @@
+
+STOCK REPLENISHMENT DECISION RULES
+=====================================
+
+RULE 1 — TRIGGER CONDITION
+  Replenishment is triggered when:  current_stock ≤ reorder_point
+  The agent must check all SKUs at least once per day.
+
+RULE 2 — ORDER QUANTITY
+  order_qty = max(EOQ, MOQ)
+  Round up to the nearest MOQ multiple if EOQ is not a multiple of MOQ.
+
+RULE 3 — SUPPLIER DELAY BUFFER
+  If a supplier has had ≥ 2 delays in the last 60 days:
+    adjusted_lead_time = base_lead_time × 1.25
+    Recalculate ROP using adjusted_lead_time.
+
+RULE 4 — DEMAND SPIKE HANDLING
+  If last-7-day average demand > 1.5× rolling-30-day average:
+    Apply a 25% buffer to the order quantity.
+    Flag as "demand spike detected" in the recommendation.
+
+RULE 5 — SAFETY STOCK REVIEW CYCLE
+  Safety stock parameters are reviewed every 30 days.
+  If σ_d changed by > 15%, recalculate safety stock and ROP.
+
+RULE 6 — MULTI-SUPPLIER SOURCING
+  If primary supplier reliability < 0.80, split order:
+    70% primary supplier, 30% alternate (lowest lead time).
+
+RULE 7 — ESCALATION TRIGGERS
+  Always escalate to human analyst when:
+    (a) Order value > $50,000
+    (b) Confidence score < 0.60
+    (c) Stock is already in stockout (current_stock = 0)
+    (d) Demand forecast uncertainty > 30%
+
+RULE 8 — SAFETY & COMPLIANCE
+  The agent MUST NOT directly execute purchase orders.
+  It generates recommendations only; humans approve and execute.
+  All recommendations include a confidence score and reasoning chain.

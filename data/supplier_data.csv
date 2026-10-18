@@ -1,0 +1,16 @@
+supplier_id,supplier_name,contact_email,sku_id,sku_name,base_lead_time_days,adjusted_lead_time_days,min_order_qty,reliability_score,payment_terms_days,active
+SUP-A,OfficeWorld Distributors,orders@officeworld.com,SKU-001,Printer Paper A4 (500 sheets),7,7,100,0.76,30,True
+SUP-A,OfficeWorld Distributors,orders@officeworld.com,SKU-002,Ball-Point Pens (Box 50),7,7,50,0.8,30,True
+SUP-A,OfficeWorld Distributors,orders@officeworld.com,SKU-003,Stapler Heavy Duty,7,7,10,0.87,30,True
+SUP-B,TechParts Global Ltd,supply@techparts.com,SKU-004,USB-C Cables (Pack 5),10,13,20,0.175,30,True
+SUP-B,TechParts Global Ltd,supply@techparts.com,SKU-005,Wireless Mouse,10,10,10,0.8,30,True
+SUP-B,TechParts Global Ltd,supply@techparts.com,SKU-006,HDMI Cables 2m,10,10,20,0.9,30,True
+SUP-B,TechParts Global Ltd,supply@techparts.com,SKU-007,Laptop Stand Aluminium,10,10,5,0.88,30,True
+SUP-B,TechParts Global Ltd,supply@techparts.com,SKU-008,AA Batteries (Pack 20),10,10,50,0.8,30,True
+SUP-C,Industrial SafetyPro,sales@safetypro.com,SKU-009,Safety Gloves (Box 100),5,5,10,0.89,30,True
+SUP-C,Industrial SafetyPro,sales@safetypro.com,SKU-010,Face Masks (Box 50),5,5,20,0.94,30,True
+SUP-C,Industrial SafetyPro,sales@safetypro.com,SKU-011,Safety Goggles,5,5,10,0.75,30,True
+SUP-C,Industrial SafetyPro,sales@safetypro.com,SKU-012,Cable Ties 300mm (Pack 100),5,5,20,0.94,30,True
+SUP-C,Industrial SafetyPro,sales@safetypro.com,SKU-013,Padlock Heavy Duty,5,5,5,0.91,30,True
+SUP-A,OfficeWorld Distributors,orders@officeworld.com,SKU-014,Whiteboard Markers (Set 12),7,7,10,0.83,30,True
+SUP-A,OfficeWorld Distributors,orders@officeworld.com,SKU-015,Sticky Notes 76x76 (12-pack),7,7,24,0.79,30,True

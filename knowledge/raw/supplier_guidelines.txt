@@ -1,0 +1,38 @@
+
+SUPPLIER ENGAGEMENT GUIDELINES
+================================
+
+1. PREFERRED SUPPLIER SELECTION
+   Suppliers are ranked by: reliability_score DESC, lead_time_days ASC.
+   Minimum acceptable reliability score: 0.75
+
+2. LEAD TIME ADJUSTMENT POLICY
+   If a supplier delays > 3 times in a 90-day window, their adjusted_lead_time
+   is increased by 20% (rounded up to nearest day) to protect stock levels.
+   The adjustment resets after 90 consecutive on-time deliveries.
+
+3. FEEDBACK RECORDING
+   Every delivery (on-time or delayed) MUST be recorded in supplier_feedback.csv.
+   Delay reasons should be one of the standard categories:
+     - Port congestion
+     - Production backlog
+     - Customs delay
+     - Weather disruption
+     - Raw material shortage
+     - Other (with free-text note)
+
+4. COMMUNICATION PROTOCOL
+   For delays > 5 days: Notify Procurement Manager within 24 hours.
+   For delays > 10 days: Trigger alternate supplier sourcing review.
+
+5. SUPPLIER SCORECARD REVIEW
+   Quarterly review of all supplier reliability scores.
+   Suppliers with score < 0.80 are placed on a performance improvement plan.
+
+6. MINIMUM ORDER QUANTITIES (MOQ)
+   MOQ must be respected in all purchase orders.
+   If EOQ < MOQ, order quantity = MOQ.
+
+7. PAYMENT TERMS
+   Standard: Net-30.
+   Early payment discount available: 2% if paid within 10 days.

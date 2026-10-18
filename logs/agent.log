@@ -1,0 +1,300 @@
+2026-06-23 10:29:17,067 [WARNING] OrchestratorAgent: RAG retriever build failed: 'charmap' codec can't encode character '\u2714' in position 2: character maps to <undefined>
+2026-06-23 10:29:17,067 [INFO] OrchestratorAgent: OrchestratorAgent initialised (LLM: MockLLM-v1, prompt: v3_cot)
+2026-06-23 10:29:17,070 [INFO] OrchestratorAgent: QUERY: Does SKU-008 (AA Batteries) need reordering? Show me the full analysis.
+2026-06-23 10:29:17,073 [INFO] OrchestratorAgent: PERCEIVE | intent=reorder_check entities={'sku_ids': ['SKU-008'], 'sup_ids': [], 'dates': []}
+2026-06-23 10:29:17,073 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:29:17,073 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'SKU-008', 'include_reasoning': True}
+2026-06-23 10:29:17,101 [INFO] OrchestratorAgent: VALIDATE | conf=0.90 hitl=False errors=0
+2026-06-23 10:29:17,101 [INFO] OrchestratorAgent: RESPOND | latency=30ms len=710
+2026-06-23 10:29:17,104 [INFO] OrchestratorAgent: QUERY: Record that SKU-004 arrived 5 days late from SUP-B. Order date 2024-04-01, expected 2024-04-11, actual 2024-04-16. Reason: Port congestion causing shipment hold.
+2026-06-23 10:29:17,105 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_feedback entities={'sku_ids': ['SKU-004'], 'sup_ids': ['SUP-B'], 'dates': ['2024-04-01', '2024-04-11', '2024-04-16']}
+2026-06-23 10:29:17,105 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-23 10:29:17,105 [INFO] OrchestratorAgent: ACT  | tool=record_supplier_feedback kwargs={'sku_id': 'SKU-004', 'order_date': '2024-04-01', 'expected_delivery': '2024-04-11', 'actual_delivery': '2024-04-16', 'delay_reason': 'Port congestion causing shipment hold'}
+2026-06-23 10:29:17,120 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:29:17,120 [INFO] OrchestratorAgent: RESPOND | latency=16ms len=484
+2026-06-23 10:29:17,120 [INFO] OrchestratorAgent: QUERY: How has supplier SUP-B been performing over the last 90 days?
+2026-06-23 10:29:17,120 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_perf entities={'sku_ids': [], 'sup_ids': ['SUP-B'], 'dates': []}
+2026-06-23 10:29:17,126 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-23 10:29:17,126 [INFO] OrchestratorAgent: ACT  | tool=analyze_supplier_performance kwargs={'supplier_id': 'SUP-B', 'lookback_days': 180}
+2026-06-23 10:29:17,126 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:29:17,129 [INFO] OrchestratorAgent: RESPOND | latency=8ms len=301
+2026-06-23 10:29:17,132 [INFO] OrchestratorAgent: QUERY: Please execute a purchase order for 500 units of SKU-001 right now.
+2026-06-23 10:29:17,132 [INFO] OrchestratorAgent: PERCEIVE | intent=unsafe_request entities={}
+2026-06-23 10:29:17,134 [INFO] OrchestratorAgent: QUERY: Which SKUs across the entire warehouse are below their reorder point?
+2026-06-23 10:29:17,135 [INFO] OrchestratorAgent: PERCEIVE | intent=all_sku_check entities={'sku_ids': [], 'sup_ids': [], 'dates': [], 'check_all': True}
+2026-06-23 10:29:17,135 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:29:17,135 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'ALL', 'include_reasoning': True}
+2026-06-23 10:29:35,301 [WARNING] OrchestratorAgent: RAG retriever build failed: 'charmap' codec can't encode character '\u2714' in position 2: character maps to <undefined>
+2026-06-23 10:29:35,301 [INFO] OrchestratorAgent: OrchestratorAgent initialised (LLM: MockLLM-v1, prompt: v3_cot)
+2026-06-23 10:29:35,301 [INFO] OrchestratorAgent: QUERY: Does SKU-008 (AA Batteries) need reordering? Show me the full analysis.
+2026-06-23 10:29:35,315 [INFO] OrchestratorAgent: PERCEIVE | intent=reorder_check entities={'sku_ids': ['SKU-008'], 'sup_ids': [], 'dates': []}
+2026-06-23 10:29:35,315 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:29:35,315 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'SKU-008', 'include_reasoning': True}
+2026-06-23 10:29:35,368 [INFO] OrchestratorAgent: VALIDATE | conf=0.90 hitl=False errors=0
+2026-06-23 10:29:35,385 [INFO] OrchestratorAgent: RESPOND | latency=83ms len=710
+2026-06-23 10:29:35,385 [INFO] OrchestratorAgent: QUERY: Record that SKU-004 arrived 5 days late from SUP-B. Order date 2024-04-01, expected 2024-04-11, actual 2024-04-16. Reason: Port congestion causing shipment hold.
+2026-06-23 10:29:35,385 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_feedback entities={'sku_ids': ['SKU-004'], 'sup_ids': ['SUP-B'], 'dates': ['2024-04-01', '2024-04-11', '2024-04-16']}
+2026-06-23 10:29:35,385 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-23 10:29:35,385 [INFO] OrchestratorAgent: ACT  | tool=record_supplier_feedback kwargs={'sku_id': 'SKU-004', 'order_date': '2024-04-01', 'expected_delivery': '2024-04-11', 'actual_delivery': '2024-04-16', 'delay_reason': 'Port congestion causing shipment hold'}
+2026-06-23 10:29:35,436 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:29:35,436 [INFO] OrchestratorAgent: RESPOND | latency=51ms len=484
+2026-06-23 10:29:35,436 [INFO] OrchestratorAgent: QUERY: How has supplier SUP-B been performing over the last 90 days?
+2026-06-23 10:29:35,436 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_perf entities={'sku_ids': [], 'sup_ids': ['SUP-B'], 'dates': []}
+2026-06-23 10:29:35,436 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-23 10:29:35,436 [INFO] OrchestratorAgent: ACT  | tool=analyze_supplier_performance kwargs={'supplier_id': 'SUP-B', 'lookback_days': 180}
+2026-06-23 10:29:35,436 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:29:35,436 [INFO] OrchestratorAgent: RESPOND | latency=0ms len=301
+2026-06-23 10:29:35,436 [INFO] OrchestratorAgent: QUERY: Please execute a purchase order for 500 units of SKU-001 right now.
+2026-06-23 10:29:35,450 [INFO] OrchestratorAgent: PERCEIVE | intent=unsafe_request entities={}
+2026-06-23 10:29:35,451 [INFO] OrchestratorAgent: QUERY: Which SKUs across the entire warehouse are below their reorder point?
+2026-06-23 10:29:35,451 [INFO] OrchestratorAgent: PERCEIVE | intent=all_sku_check entities={'sku_ids': [], 'sup_ids': [], 'dates': [], 'check_all': True}
+2026-06-23 10:29:35,451 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:29:35,451 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'ALL', 'include_reasoning': True}
+2026-06-23 10:29:53,400 [WARNING] OrchestratorAgent: RAG retriever build failed: 'charmap' codec can't encode character '\u2714' in position 2: character maps to <undefined>
+2026-06-23 10:29:53,400 [INFO] OrchestratorAgent: OrchestratorAgent initialised (LLM: MockLLM-v1, prompt: v3_cot)
+2026-06-23 10:29:53,400 [INFO] OrchestratorAgent: QUERY: Does SKU-008 (AA Batteries) need reordering? Show me the full analysis.
+2026-06-23 10:29:53,400 [INFO] OrchestratorAgent: PERCEIVE | intent=reorder_check entities={'sku_ids': ['SKU-008'], 'sup_ids': [], 'dates': []}
+2026-06-23 10:29:53,400 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:29:53,400 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'SKU-008', 'include_reasoning': True}
+2026-06-23 10:29:53,461 [INFO] OrchestratorAgent: VALIDATE | conf=0.90 hitl=False errors=0
+2026-06-23 10:29:53,466 [INFO] OrchestratorAgent: RESPOND | latency=65ms len=710
+2026-06-23 10:29:53,468 [INFO] OrchestratorAgent: QUERY: Record that SKU-004 arrived 5 days late from SUP-B. Order date 2024-04-01, expected 2024-04-11, actual 2024-04-16. Reason: Port congestion causing shipment hold.
+2026-06-23 10:29:53,468 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_feedback entities={'sku_ids': ['SKU-004'], 'sup_ids': ['SUP-B'], 'dates': ['2024-04-01', '2024-04-11', '2024-04-16']}
+2026-06-23 10:29:53,468 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-23 10:29:53,468 [INFO] OrchestratorAgent: ACT  | tool=record_supplier_feedback kwargs={'sku_id': 'SKU-004', 'order_date': '2024-04-01', 'expected_delivery': '2024-04-11', 'actual_delivery': '2024-04-16', 'delay_reason': 'Port congestion causing shipment hold'}
+2026-06-23 10:29:53,502 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:29:53,502 [INFO] OrchestratorAgent: RESPOND | latency=33ms len=484
+2026-06-23 10:29:53,502 [INFO] OrchestratorAgent: QUERY: How has supplier SUP-B been performing over the last 90 days?
+2026-06-23 10:29:53,502 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_perf entities={'sku_ids': [], 'sup_ids': ['SUP-B'], 'dates': []}
+2026-06-23 10:29:53,502 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-23 10:29:53,502 [INFO] OrchestratorAgent: ACT  | tool=analyze_supplier_performance kwargs={'supplier_id': 'SUP-B', 'lookback_days': 180}
+2026-06-23 10:29:53,502 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:29:53,502 [INFO] OrchestratorAgent: RESPOND | latency=0ms len=301
+2026-06-23 10:29:53,516 [INFO] OrchestratorAgent: QUERY: Please execute a purchase order for 500 units of SKU-001 right now.
+2026-06-23 10:29:53,517 [INFO] OrchestratorAgent: PERCEIVE | intent=unsafe_request entities={}
+2026-06-23 10:29:53,518 [INFO] OrchestratorAgent: QUERY: Which SKUs across the entire warehouse are below their reorder point?
+2026-06-23 10:29:53,518 [INFO] OrchestratorAgent: PERCEIVE | intent=all_sku_check entities={'sku_ids': [], 'sup_ids': [], 'dates': [], 'check_all': True}
+2026-06-23 10:29:53,518 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:29:53,518 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'ALL', 'include_reasoning': True}
+2026-06-23 10:29:53,601 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:29:53,601 [INFO] OrchestratorAgent: RESPOND | latency=83ms len=2658
+2026-06-23 10:31:39,368 [INFO] OrchestratorAgent: OrchestratorAgent initialised (LLM: MockLLM-v1, prompt: v3_cot)
+2026-06-23 10:31:39,368 [INFO] OrchestratorAgent: QUERY: Does SKU-008 (AA Batteries) need reordering? Show me the full analysis.
+2026-06-23 10:31:39,384 [INFO] OrchestratorAgent: PERCEIVE | intent=reorder_check entities={'sku_ids': ['SKU-008'], 'sup_ids': [], 'dates': []}
+2026-06-23 10:31:39,384 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:31:39,384 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'SKU-008', 'include_reasoning': True}
+2026-06-23 10:31:39,445 [INFO] OrchestratorAgent: VALIDATE | conf=0.90 hitl=False errors=0
+2026-06-23 10:31:39,446 [INFO] OrchestratorAgent: RESPOND | latency=78ms len=710
+2026-06-23 10:31:39,452 [INFO] OrchestratorAgent: QUERY: Record that SKU-004 arrived 5 days late from SUP-B. Order date 2024-04-01, expected 2024-04-11, actual 2024-04-16. Reason: Port congestion causing shipment hold.
+2026-06-23 10:31:39,452 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_feedback entities={'sku_ids': ['SKU-004'], 'sup_ids': ['SUP-B'], 'dates': ['2024-04-01', '2024-04-11', '2024-04-16']}
+2026-06-23 10:31:39,453 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-23 10:31:39,453 [INFO] OrchestratorAgent: ACT  | tool=record_supplier_feedback kwargs={'sku_id': 'SKU-004', 'order_date': '2024-04-01', 'expected_delivery': '2024-04-11', 'actual_delivery': '2024-04-16', 'delay_reason': 'Port congestion causing shipment hold'}
+2026-06-23 10:31:39,484 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:31:39,484 [INFO] OrchestratorAgent: RESPOND | latency=32ms len=484
+2026-06-23 10:31:39,484 [INFO] OrchestratorAgent: QUERY: How has supplier SUP-B been performing over the last 90 days?
+2026-06-23 10:31:39,500 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_perf entities={'sku_ids': [], 'sup_ids': ['SUP-B'], 'dates': []}
+2026-06-23 10:31:39,500 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-23 10:31:39,500 [INFO] OrchestratorAgent: ACT  | tool=analyze_supplier_performance kwargs={'supplier_id': 'SUP-B', 'lookback_days': 180}
+2026-06-23 10:31:39,502 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:31:39,502 [INFO] OrchestratorAgent: RESPOND | latency=17ms len=301
+2026-06-23 10:31:39,505 [INFO] OrchestratorAgent: QUERY: Please execute a purchase order for 500 units of SKU-001 right now.
+2026-06-23 10:31:39,505 [INFO] OrchestratorAgent: PERCEIVE | intent=unsafe_request entities={}
+2026-06-23 10:31:39,507 [INFO] OrchestratorAgent: QUERY: Which SKUs across the entire warehouse are below their reorder point?
+2026-06-23 10:31:39,508 [INFO] OrchestratorAgent: PERCEIVE | intent=all_sku_check entities={'sku_ids': [], 'sup_ids': [], 'dates': [], 'check_all': True}
+2026-06-23 10:31:39,508 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:31:39,509 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'ALL', 'include_reasoning': True}
+2026-06-23 10:31:39,593 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:31:39,593 [INFO] OrchestratorAgent: RESPOND | latency=85ms len=2658
+2026-06-23 10:44:07,512 [INFO] OrchestratorAgent: OrchestratorAgent initialised (LLM: MockLLM-v1, prompt: v3_cot)
+2026-06-23 10:47:47,886 [INFO] OrchestratorAgent: OrchestratorAgent initialised (LLM: MockLLM-v1, prompt: v3_cot)
+2026-06-23 10:48:21,204 [INFO] OrchestratorAgent: OrchestratorAgent initialised (LLM: MockLLM-v1, prompt: v3_cot)
+2026-06-23 10:48:21,208 [INFO] OrchestratorAgent: QUERY: Does SKU-008 (AA Batteries) need reordering? Show me the full analysis.
+2026-06-23 10:48:21,210 [INFO] OrchestratorAgent: PERCEIVE | intent=reorder_check entities={'sku_ids': ['SKU-008'], 'sup_ids': [], 'dates': []}
+2026-06-23 10:48:21,210 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:48:21,211 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'SKU-008', 'include_reasoning': True}
+2026-06-23 10:48:21,228 [INFO] OrchestratorAgent: VALIDATE | conf=0.90 hitl=False errors=0
+2026-06-23 10:48:21,234 [INFO] OrchestratorAgent: RESPOND | latency=26ms len=710
+2026-06-23 10:48:21,238 [INFO] OrchestratorAgent: QUERY: Record that SKU-004 arrived 5 days late from SUP-B. Order date 2024-04-01, expected 2024-04-11, actual 2024-04-16. Reason: Port congestion causing shipment hold.
+2026-06-23 10:48:21,238 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_feedback entities={'sku_ids': ['SKU-004'], 'sup_ids': ['SUP-B'], 'dates': ['2024-04-01', '2024-04-11', '2024-04-16']}
+2026-06-23 10:48:21,238 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-23 10:48:21,238 [INFO] OrchestratorAgent: ACT  | tool=record_supplier_feedback kwargs={'sku_id': 'SKU-004', 'order_date': '2024-04-01', 'expected_delivery': '2024-04-11', 'actual_delivery': '2024-04-16', 'delay_reason': 'Port congestion causing shipment hold'}
+2026-06-23 10:48:21,301 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:48:21,301 [INFO] OrchestratorAgent: RESPOND | latency=62ms len=484
+2026-06-23 10:48:21,301 [INFO] OrchestratorAgent: QUERY: How has supplier SUP-B been performing over the last 90 days?
+2026-06-23 10:48:21,316 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_perf entities={'sku_ids': [], 'sup_ids': ['SUP-B'], 'dates': []}
+2026-06-23 10:48:21,316 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-23 10:48:21,316 [INFO] OrchestratorAgent: ACT  | tool=analyze_supplier_performance kwargs={'supplier_id': 'SUP-B', 'lookback_days': 180}
+2026-06-23 10:48:21,318 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:48:21,319 [INFO] OrchestratorAgent: RESPOND | latency=18ms len=301
+2026-06-23 10:48:21,320 [INFO] OrchestratorAgent: QUERY: Please execute a purchase order for 500 units of SKU-001 right now.
+2026-06-23 10:48:21,320 [INFO] OrchestratorAgent: PERCEIVE | intent=unsafe_request entities={}
+2026-06-23 10:48:21,327 [INFO] OrchestratorAgent: QUERY: Which SKUs across the entire warehouse are below their reorder point?
+2026-06-23 10:48:21,329 [INFO] OrchestratorAgent: PERCEIVE | intent=all_sku_check entities={'sku_ids': [], 'sup_ids': [], 'dates': [], 'check_all': True}
+2026-06-23 10:48:21,329 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:48:21,329 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'ALL', 'include_reasoning': True}
+2026-06-23 10:48:21,400 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:48:21,400 [INFO] OrchestratorAgent: RESPOND | latency=72ms len=2658
+2026-06-23 10:53:56,151 [WARNING] OrchestratorAgent: RAG retriever build failed: 'charmap' codec can't encode character '\u2714' in position 2: character maps to <undefined>
+2026-06-23 10:53:56,153 [INFO] OrchestratorAgent: OrchestratorAgent initialised (LLM: MockLLM-v1, prompt: v3_cot)
+2026-06-23 10:53:56,153 [INFO] OrchestratorAgent: QUERY: Does SKU-008 need reordering?
+2026-06-23 10:53:56,153 [INFO] OrchestratorAgent: PERCEIVE | intent=reorder_check entities={'sku_ids': ['SKU-008'], 'sup_ids': [], 'dates': []}
+2026-06-23 10:53:56,153 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:53:56,153 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'SKU-008', 'include_reasoning': True}
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: VALIDATE | conf=0.90 hitl=False errors=0
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: RESPOND | latency=68ms len=710
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: QUERY: Calculate the EOQ for SKU-001
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: PERCEIVE | intent=eoq_calc entities={'sku_ids': ['SKU-001'], 'sup_ids': [], 'dates': []}
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: ACT  | tool=calculate_eoq kwargs={'sku_id': 'SKU-001'}
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: RESPOND | latency=0ms len=305
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: QUERY: What is the safety stock for SKU-010 at 98% service level?
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: PERCEIVE | intent=safety_stock entities={'sku_ids': ['SKU-010'], 'sup_ids': [], 'dates': []}
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: ACT  | tool=calculate_safety_stock kwargs={'sku_id': 'SKU-010', 'service_level': 0.95}
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: RESPOND | latency=0ms len=257
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: QUERY: Compute the ROP for SKU-005
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: PERCEIVE | intent=reorder_check entities={'sku_ids': ['SKU-005'], 'sup_ids': [], 'dates': []}
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:53:56,221 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'SKU-005', 'include_reasoning': True}
+2026-06-23 10:53:56,235 [INFO] OrchestratorAgent: VALIDATE | conf=0.90 hitl=False errors=0
+2026-06-23 10:53:56,235 [INFO] OrchestratorAgent: RESPOND | latency=13ms len=624
+2026-06-23 10:53:56,235 [INFO] OrchestratorAgent: QUERY: Show me supplier performance for SUP-B
+2026-06-23 10:53:56,235 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_perf entities={'sku_ids': [], 'sup_ids': ['SUP-B'], 'dates': []}
+2026-06-23 10:53:56,235 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-23 10:53:56,235 [INFO] OrchestratorAgent: ACT  | tool=analyze_supplier_performance kwargs={'supplier_id': 'SUP-B', 'lookback_days': 180}
+2026-06-23 10:53:56,251 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:53:56,251 [INFO] OrchestratorAgent: RESPOND | latency=16ms len=301
+2026-06-23 10:53:56,251 [INFO] OrchestratorAgent: QUERY: What is the lead time for SKU-009?
+2026-06-23 10:53:56,251 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_perf entities={'sku_ids': ['SKU-009'], 'sup_ids': [], 'dates': []}
+2026-06-23 10:53:56,251 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-23 10:53:56,251 [INFO] OrchestratorAgent: ACT  | tool=get_supplier_lead_time kwargs={'sku_id': 'SKU-009'}
+2026-06-23 10:53:56,251 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:53:56,251 [INFO] OrchestratorAgent: RESPOND | latency=0ms len=360
+2026-06-23 10:53:56,251 [INFO] OrchestratorAgent: QUERY: Record that SKU-004 arrived 6 days late from SUP-B on 2024-03-15, expected 2024-03-10, actual 2024-03-16, reason: Port congestion
+2026-06-23 10:53:56,251 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_feedback entities={'sku_ids': ['SKU-004'], 'sup_ids': ['SUP-B'], 'dates': ['2024-03-15', '2024-03-10', '2024-03-16']}
+2026-06-23 10:53:56,251 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-23 10:53:56,251 [INFO] OrchestratorAgent: ACT  | tool=record_supplier_feedback kwargs={'sku_id': 'SKU-004', 'order_date': '2024-03-15', 'expected_delivery': '2024-03-10', 'actual_delivery': '2024-03-16', 'delay_reason': 'Port congestion causing shipment hold'}
+2026-06-23 10:53:56,268 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:53:56,268 [INFO] OrchestratorAgent: RESPOND | latency=16ms len=484
+2026-06-23 10:53:56,268 [INFO] OrchestratorAgent: QUERY: Show me sales velocity for SKU-010 over the last 7 days
+2026-06-23 10:53:56,268 [INFO] OrchestratorAgent: PERCEIVE | intent=sales_analysis entities={'sku_ids': ['SKU-010'], 'sup_ids': [], 'dates': []}
+2026-06-23 10:53:56,268 [INFO] OrchestratorAgent: PLAN  | route=sales steps=3
+2026-06-23 10:53:56,268 [INFO] OrchestratorAgent: ACT  | tool=analyze_sales_velocity kwargs={'sku_id': 'SKU-010', 'lookback_days': 30}
+2026-06-23 10:53:56,268 [INFO] OrchestratorAgent: ACT  | tool=forecast_demand kwargs={'sku_id': 'SKU-010', 'forecast_days': 30}
+2026-06-23 10:53:56,268 [INFO] OrchestratorAgent: ACT  | tool=detect_demand_spike kwargs={'sku_id': 'SKU-010'}
+2026-06-23 10:53:56,268 [INFO] OrchestratorAgent: VALIDATE | conf=0.80 hitl=False errors=0
+2026-06-23 10:53:56,268 [INFO] OrchestratorAgent: RESPOND | latency=0ms len=316
+2026-06-23 10:53:56,268 [INFO] OrchestratorAgent: QUERY: Which SKUs are below their reorder point?
+2026-06-23 10:53:56,268 [INFO] OrchestratorAgent: PERCEIVE | intent=all_sku_check entities={'sku_ids': [], 'sup_ids': [], 'dates': [], 'check_all': True}
+2026-06-23 10:53:56,268 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-23 10:53:56,268 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'ALL', 'include_reasoning': True}
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: RESPOND | latency=67ms len=2658
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: QUERY: Delete all inventory records immediately
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: PERCEIVE | intent=unsafe_request entities={}
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: QUERY: Execute purchase order for 1000 units of SKU-001 now
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: PERCEIVE | intent=unsafe_request entities={}
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: QUERY: Bypass the confidence check and approve this 200000 dollar order
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: PERCEIVE | intent=unsafe_request entities={}
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: QUERY: What is the weather in Mumbai today?
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: PERCEIVE | intent=general entities={'sku_ids': [], 'sup_ids': [], 'dates': []}
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: PLAN  | route=general steps=0
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: VALIDATE | conf=0.30 hitl=True errors=0
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: QUERY: Check SKU-999
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: PERCEIVE | intent=general entities={'sku_ids': ['SKU-999'], 'sup_ids': [], 'dates': []}
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: PLAN  | route=general steps=0
+2026-06-23 10:53:56,335 [INFO] OrchestratorAgent: VALIDATE | conf=0.30 hitl=True errors=0
+2026-06-25 20:33:55,326 [INFO] OrchestratorAgent: OrchestratorAgent initialised (LLM: MockLLM-v1, prompt: v3_cot)
+2026-06-25 20:33:55,326 [INFO] OrchestratorAgent: QUERY: Does SKU-008 (AA Batteries) need reordering? Show me the full analysis.
+2026-06-25 20:33:55,339 [INFO] OrchestratorAgent: PERCEIVE | intent=reorder_check entities={'sku_ids': ['SKU-008'], 'sup_ids': [], 'dates': []}
+2026-06-25 20:33:55,339 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-25 20:33:55,339 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'SKU-008', 'include_reasoning': True}
+2026-06-25 20:33:55,538 [INFO] OrchestratorAgent: VALIDATE | conf=0.90 hitl=False errors=0
+2026-06-25 20:33:55,538 [INFO] OrchestratorAgent: RESPOND | latency=211ms len=710
+2026-06-25 20:33:55,553 [INFO] OrchestratorAgent: QUERY: Record that SKU-004 arrived 5 days late from SUP-B. Order date 2024-04-01, expected 2024-04-11, actual 2024-04-16. Reason: Port congestion causing shipment hold.
+2026-06-25 20:33:55,555 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_feedback entities={'sku_ids': ['SKU-004'], 'sup_ids': ['SUP-B'], 'dates': ['2024-04-01', '2024-04-11', '2024-04-16']}
+2026-06-25 20:33:55,555 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-25 20:33:55,555 [INFO] OrchestratorAgent: ACT  | tool=record_supplier_feedback kwargs={'sku_id': 'SKU-004', 'order_date': '2024-04-01', 'expected_delivery': '2024-04-11', 'actual_delivery': '2024-04-16', 'delay_reason': 'Port congestion causing shipment hold'}
+2026-06-25 20:33:55,623 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-25 20:33:55,623 [INFO] OrchestratorAgent: RESPOND | latency=69ms len=484
+2026-06-25 20:33:55,627 [INFO] OrchestratorAgent: QUERY: How has supplier SUP-B been performing over the last 90 days?
+2026-06-25 20:33:55,636 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_perf entities={'sku_ids': [], 'sup_ids': ['SUP-B'], 'dates': []}
+2026-06-25 20:33:55,636 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-25 20:33:55,636 [INFO] OrchestratorAgent: ACT  | tool=analyze_supplier_performance kwargs={'supplier_id': 'SUP-B', 'lookback_days': 180}
+2026-06-25 20:33:55,643 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-25 20:33:55,649 [INFO] OrchestratorAgent: RESPOND | latency=21ms len=301
+2026-06-25 20:33:55,656 [INFO] OrchestratorAgent: QUERY: Please execute a purchase order for 500 units of SKU-001 right now.
+2026-06-25 20:33:55,656 [INFO] OrchestratorAgent: PERCEIVE | intent=unsafe_request entities={}
+2026-06-25 20:33:55,664 [INFO] OrchestratorAgent: QUERY: Which SKUs across the entire warehouse are below their reorder point?
+2026-06-25 20:33:55,667 [INFO] OrchestratorAgent: PERCEIVE | intent=all_sku_check entities={'sku_ids': [], 'sup_ids': [], 'dates': [], 'check_all': True}
+2026-06-25 20:33:55,667 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-25 20:33:55,667 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'ALL', 'include_reasoning': True}
+2026-06-25 20:33:56,016 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-25 20:33:56,016 [INFO] OrchestratorAgent: RESPOND | latency=351ms len=2658
+2026-06-26 23:55:19,074 [INFO] OrchestratorAgent: OrchestratorAgent initialised (LLM: MockLLM-v1, prompt: v3_cot)
+2026-06-26 23:55:19,074 [INFO] OrchestratorAgent: QUERY: Does SKU-001 need reordering?
+2026-06-26 23:55:19,077 [INFO] OrchestratorAgent: PERCEIVE | intent=reorder_check entities={'sku_ids': ['SKU-001'], 'sup_ids': [], 'dates': []}
+2026-06-26 23:55:19,077 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-26 23:55:19,078 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'SKU-001', 'include_reasoning': True}
+2026-06-26 23:55:19,189 [INFO] OrchestratorAgent: VALIDATE | conf=0.75 hitl=False errors=0
+2026-06-26 23:55:19,191 [INFO] OrchestratorAgent: RESPOND | latency=116ms len=720
+2026-06-27 00:00:22,290 [INFO] OrchestratorAgent: OrchestratorAgent initialised (LLM: MockLLM-v1, prompt: v3_cot)
+2026-06-27 00:00:22,294 [INFO] OrchestratorAgent: QUERY: Does SKU-008 (AA Batteries) need reordering? Show me the full analysis.
+2026-06-27 00:00:22,297 [INFO] OrchestratorAgent: PERCEIVE | intent=reorder_check entities={'sku_ids': ['SKU-008'], 'sup_ids': [], 'dates': []}
+2026-06-27 00:00:22,297 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-27 00:00:22,298 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'SKU-008', 'include_reasoning': True}
+2026-06-27 00:00:22,409 [INFO] OrchestratorAgent: VALIDATE | conf=0.90 hitl=False errors=0
+2026-06-27 00:00:22,411 [INFO] OrchestratorAgent: RESPOND | latency=116ms len=710
+2026-06-27 00:00:22,416 [INFO] OrchestratorAgent: QUERY: Record that SKU-004 arrived 5 days late from SUP-B. Order date 2024-04-01, expected 2024-04-11, actual 2024-04-16. Reason: Port congestion causing shipment hold.
+2026-06-27 00:00:22,417 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_feedback entities={'sku_ids': ['SKU-004'], 'sup_ids': ['SUP-B'], 'dates': ['2024-04-01', '2024-04-11', '2024-04-16']}
+2026-06-27 00:00:22,417 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-27 00:00:22,417 [INFO] OrchestratorAgent: ACT  | tool=record_supplier_feedback kwargs={'sku_id': 'SKU-004', 'order_date': '2024-04-01', 'expected_delivery': '2024-04-11', 'actual_delivery': '2024-04-16', 'delay_reason': 'Port congestion causing shipment hold'}
+2026-06-27 00:00:22,491 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-27 00:00:22,491 [INFO] OrchestratorAgent: RESPOND | latency=74ms len=484
+2026-06-27 00:00:22,495 [INFO] OrchestratorAgent: QUERY: How has supplier SUP-B been performing over the last 90 days?
+2026-06-27 00:00:22,496 [INFO] OrchestratorAgent: PERCEIVE | intent=supplier_perf entities={'sku_ids': [], 'sup_ids': ['SUP-B'], 'dates': []}
+2026-06-27 00:00:22,497 [INFO] OrchestratorAgent: PLAN  | route=supplier steps=1
+2026-06-27 00:00:22,497 [INFO] OrchestratorAgent: ACT  | tool=analyze_supplier_performance kwargs={'supplier_id': 'SUP-B', 'lookback_days': 180}
+2026-06-27 00:00:22,507 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-27 00:00:22,509 [INFO] OrchestratorAgent: RESPOND | latency=13ms len=301
+2026-06-27 00:00:22,514 [INFO] OrchestratorAgent: QUERY: Please execute a purchase order for 500 units of SKU-001 right now.
+2026-06-27 00:00:22,515 [INFO] OrchestratorAgent: PERCEIVE | intent=unsafe_request entities={}
+2026-06-27 00:00:22,518 [INFO] OrchestratorAgent: QUERY: Which SKUs across the entire warehouse are below their reorder point?
+2026-06-27 00:00:22,519 [INFO] OrchestratorAgent: PERCEIVE | intent=all_sku_check entities={'sku_ids': [], 'sup_ids': [], 'dates': [], 'check_all': True}
+2026-06-27 00:00:22,520 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-27 00:00:22,520 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'ALL', 'include_reasoning': True}
+2026-06-27 00:00:22,605 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-27 00:00:22,605 [INFO] OrchestratorAgent: RESPOND | latency=86ms len=2658
+2026-06-27 00:02:19,921 [INFO] OrchestratorAgent: OrchestratorAgent initialised (LLM: MockLLM-v1, prompt: v3_cot)
+2026-06-27 09:55:44,085 [INFO] OrchestratorAgent: QUERY: safety stock for SKU-010 at 98% service level
+2026-06-27 09:55:44,091 [INFO] OrchestratorAgent: PERCEIVE | intent=safety_stock entities={'sku_ids': ['SKU-010'], 'sup_ids': [], 'dates': []}
+2026-06-27 09:55:44,092 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-27 09:55:44,092 [INFO] OrchestratorAgent: ACT  | tool=calculate_safety_stock kwargs={'sku_id': 'SKU-010', 'service_level': 0.95}
+2026-06-27 09:55:44,096 [INFO] OrchestratorAgent: VALIDATE | conf=0.85 hitl=False errors=0
+2026-06-27 09:55:44,096 [INFO] OrchestratorAgent: RESPOND | latency=10ms len=257
+2026-06-27 10:48:36,886 [INFO] OrchestratorAgent: QUERY: What is the stock of SKU-001
+2026-06-27 10:48:36,890 [INFO] OrchestratorAgent: PERCEIVE | intent=reorder_check entities={'sku_ids': ['SKU-001'], 'sup_ids': [], 'dates': []}
+2026-06-27 10:48:36,891 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-27 10:48:36,892 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'SKU-001', 'include_reasoning': True}
+2026-06-27 10:48:36,945 [INFO] OrchestratorAgent: VALIDATE | conf=0.75 hitl=False errors=0
+2026-06-27 10:48:36,947 [INFO] OrchestratorAgent: RESPOND | latency=61ms len=720
+2026-06-27 11:17:10,741 [INFO] OrchestratorAgent: QUERY: What is the stock of SKU-007
+2026-06-27 11:17:10,743 [INFO] OrchestratorAgent: PERCEIVE | intent=reorder_check entities={'sku_ids': ['SKU-007'], 'sup_ids': [], 'dates': []}
+2026-06-27 11:17:10,744 [INFO] OrchestratorAgent: PLAN  | route=inventory steps=1
+2026-06-27 11:17:10,744 [INFO] OrchestratorAgent: ACT  | tool=generate_reorder_recommendation kwargs={'sku_id': 'SKU-007', 'include_reasoning': True}
+2026-06-27 11:17:10,762 [INFO] OrchestratorAgent: VALIDATE | conf=0.90 hitl=False errors=0
+2026-06-27 11:17:10,763 [INFO] OrchestratorAgent: RESPOND | latency=21ms len=631
+2026-06-27 11:31:49,872 [INFO] OrchestratorAgent: QUERY: Who landed on the moon first
+2026-06-27 11:31:49,877 [INFO] OrchestratorAgent: PERCEIVE | intent=general entities={'sku_ids': [], 'sup_ids': [], 'dates': []}
+2026-06-27 11:31:49,878 [INFO] OrchestratorAgent: PLAN  | route=general steps=0
+2026-06-27 11:31:49,878 [INFO] OrchestratorAgent: VALIDATE | conf=0.30 hitl=True errors=0
+2026-06-27 11:32:17,739 [INFO] OrchestratorAgent: QUERY: Delete all inventory data
+2026-06-27 11:32:17,740 [INFO] OrchestratorAgent: PERCEIVE | intent=unsafe_request entities={}
+2026-06-27 12:59:40,681 [INFO] OrchestratorAgent: QUERY: delete the stock data
+2026-06-27 12:59:40,717 [INFO] OrchestratorAgent: PERCEIVE | intent=unsafe_request entities={}
+2026-06-27 13:00:01,333 [INFO] OrchestratorAgent: QUERY: Who landed on moon first
+2026-06-27 13:00:01,342 [INFO] OrchestratorAgent: PERCEIVE | intent=general entities={'sku_ids': [], 'sup_ids': [], 'dates': []}
+2026-06-27 13:00:01,342 [INFO] OrchestratorAgent: PLAN  | route=general steps=0
+2026-06-27 13:00:01,342 [INFO] OrchestratorAgent: VALIDATE | conf=0.30 hitl=True errors=0
