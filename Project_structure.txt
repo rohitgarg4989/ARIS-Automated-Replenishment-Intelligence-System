@@ -1,0 +1,101 @@
+capstone_agent/
+├── README.md
+├── requirements.txt
+├── .env.example
+├── .gitignore
+│
+├── docs/
+│   ├── problem_framing.md
+│   ├── demo_script.md
+│   ├── prompt_comparison_table.md
+│   ├── evaluation_report.md
+│   └── engineering_justification.md
+│
+├── knowledge/
+│   ├── raw/
+│   │   ├── product_catalog.pdf
+│   │   ├── company_policy.pdf
+│   │   ├── faq.pdf
+│   │   └── escalation_guidelines.pdf
+│   ├── processed/
+│   │   └── chunks.json
+│   └── faiss_index/
+│       ├── index.faiss
+│       └── index.pkl
+│
+├── skills/
+│   └── SKILL.md
+│
+├── data/
+│   ├── policy/
+│   │   └── policy.json
+│   ├── rlhf/
+│   │   └── feedback_store.json
+│   └── evaluation/
+│       └── test_cases.json
+│
+├── mcp/
+│   ├── __init__.py
+│   ├── server.py
+│   └── client.py
+│
+├── policy_rlhf/
+│   ├── __init__.py
+│   ├── policy_checker.py
+│   ├── feedback_collector.py
+│   └── policy_updater.py
+│
+├── agent/
+│   ├── __init__.py
+│   ├── core_agent.py
+│   ├── prompts.py
+│   ├── memory.py
+│   └── planner.py
+│
+├── retrieval/
+│   ├── __init__.py
+│   ├── document_loader.py
+│   ├── chunker.py
+│   ├── embedder.py
+│   ├── faiss_store.py
+│   └── retriever.py
+│
+├── tools/
+│   ├── __init__.py
+│   ├── tool_registry.py
+│   ├── tool_search.py
+│   └── tool_escalate.py
+│
+├── safety/
+│   ├── __init__.py
+│   ├── guardrails.py
+│   └── pii_filter.py
+│
+├── monitoring/
+│   ├── __init__.py
+│   ├── langsmith_tracer.py
+│   └── langfuse_logger.py
+│
+├── evaluation/
+│   ├── __init__.py
+│   ├── test_harness.py
+│   └── metrics.py
+│
+├── logs/
+│   ├── interactions.log
+│   ├── mcp_events.log
+│   ├── policy_change.log
+│   └── errors.log
+│
+├── deployment/
+│   ├── __init__.py
+│   ├── app.py
+│   └── config.py
+│
+└── scripts/
+    ├── build_faiss_index.py
+    ├── start_mcp_server.py
+    ├── ingest_documents.py
+    ├── run_agent.py
+    ├── run_evaluation.py
+    └── run_rlhf_pipeline.py
