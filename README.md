@@ -2,7 +2,6 @@
 
 > AI-powered stock reordering agent that tells you what to reorder, how much, and when.
 
-**Team-20:** Anandasekhar | Rohit | Raseeth  
 **Framework:** LangChain (Track A) | Python 3.11+
 
 ---
